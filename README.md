@@ -1,6 +1,7 @@
 # SnakeFX
 
-**Just a simple implementation of the game i love :smile:**
+**Just a simple implementation of the game that i really love :smile:**
+
 
 ![Alt Text](https://cdn.pbrd.co/images/HUW3218.png)
 
