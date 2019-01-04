@@ -1,0 +1,46 @@
+@font-face {
+    font-family: Roboto;
+    src: url("../font/Roboto-Regular.ttf");
+}
+
+
+.text-area {
+    -fx-font-family: Roboto;
+    -fx-font-size: 18;
+    -fx-background-color: transparent;
+}
+
+.button {
+    -fx-font-family: Roboto;
+    -fx-font-size: 15;
+}
+
+.jfx-snackbar-content {
+    -fx-background-color: #353638
+}
+
+.jfx-snackbar-toast {
+    -fx-font-family: "Roboto Light";
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 24;
+    -fx-font-weight: bold;
+}
+
+.jfx-decorator {
+    -fx-decorator-color: #005D94;
+    -fx-focus-traversable: false;
+}
+
+.jfx-decorator .button{
+    -fx-focus-traversable: false;
+}
+
+.jfx-decorator .jfx-decorator-buttons-container {
+    -fx-background-color: -fx-decorator-color;
+    -fx-focus-traversable: false;
+}
+
+.jfx-decorator .resize-border {
+    -fx-border-color: -fx-decorator-color;
+    -fx-border-width: 0 4 4 4;
+}

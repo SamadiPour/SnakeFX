@@ -1,0 +1,17 @@
+plugins {
+    id 'java'
+}
+
+group 'ir.SamadiPour'
+version '1.0'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'com.jfoenix', name: 'jfoenix', version: '8.0.2'
+    compile group: 'io.github.typhon0', name: 'AnimateFX', version: '1.2.0'
+}
