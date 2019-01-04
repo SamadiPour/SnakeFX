@@ -6,7 +6,7 @@
 ![Alt Text](https://cdn.pbrd.co/images/HUW3218.png)
 
 
-## need to be done:
+## Need to be done:
 - [X] ~~Speed control~~
 - [ ] Scoreboard
 - [ ] Different game modes
