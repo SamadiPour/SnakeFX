@@ -14,3 +14,4 @@
 - [ ] Hint in game
 - [ ] Maybe a face for snake? :confused:
 - [ ] Clean up messy code!
+- [ ] Bonus food after 5 normal food
