@@ -8,10 +8,10 @@
 
 ## Need to be done:
 - [X] ~~Speed control~~
-- [ ] Scoreboard
+- [X] ~~Scoreboard~~
 - [ ] Different game modes
+- [ ] Bonus food after 5 normal food
 - [ ] Sound
 - [ ] Hint in game
 - [ ] Maybe a face for snake? :confused:
 - [ ] Clean up messy code!
-- [ ] Bonus food after 5 normal food
