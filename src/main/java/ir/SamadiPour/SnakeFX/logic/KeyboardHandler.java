@@ -7,7 +7,7 @@ import ir.SamadiPour.SnakeFX.Main;
 public class KeyboardHandler {
 
     public static void onPressHandler(KeyEvent e) {
-        if (!Main.player.isMoved())
+        if (!Main.player.isMoved() | Game.isInDialog())
             return;
         if (validMovingKey(e.getCode())) {
             if (!Game.isGamePause())
@@ -18,6 +18,8 @@ public class KeyboardHandler {
     }
 
     public static void onReleaseHandler(KeyEvent e) {
+        if (Game.isInDialog())
+            return;
         if (e.getCode() == KeyCode.R) {
             Game.getCurrentGame().restart();
             e.consume();
@@ -26,7 +28,7 @@ public class KeyboardHandler {
             Game.setGamePause(true);
             Game.getTimeline().pause();
             e.consume();
-        } else if (e.getCode() == KeyCode.P && Game.isGamePause()) {
+        } else if (e.getCode() == KeyCode.P) {
             Game.setGamePause(false);
             Game.getTimeline().play();
             e.consume();

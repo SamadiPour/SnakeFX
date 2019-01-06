@@ -3,10 +3,9 @@ package ir.SamadiPour.SnakeFX.Controller;
 import com.jfoenix.controls.JFXColorPicker;
 import com.jfoenix.controls.JFXSlider;
 import com.jfoenix.effects.JFXDepthManager;
+import ir.SamadiPour.SnakeFX.Setting.Setting;
+import ir.SamadiPour.SnakeFX.Setting.SpeedLevel;
 import ir.SamadiPour.SnakeFX.logic.Game;
-import ir.SamadiPour.SnakeFX.logic.Score;
-import ir.SamadiPour.SnakeFX.setting.Setting;
-import ir.SamadiPour.SnakeFX.setting.SpeedLevel;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
@@ -15,6 +14,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.paint.Color;
 
 public class SidePanelController implements ChangeListener {
+
     @FXML
     Label points;
     @FXML
@@ -36,7 +36,7 @@ public class SidePanelController implements ChangeListener {
         headColorPicker.setFocusTraversable(false);
         tailColorPicker.setFocusTraversable(false);
         JFXDepthManager.setDepth(snakeImage, 2);
-        Score.scoreProperty().addListener((v, oldValue, newValue) -> points.setText(String.valueOf(newValue)));
+        points.textProperty().bind(Game.getScore().getScoreProperty());
     }
 
     @Override
