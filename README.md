@@ -15,4 +15,18 @@
 - [ ] Hint in game
 - [ ] Maybe a face for snake? :confused:
 - [ ] Clean up messy code!
-- [ ] add high score instead of snake image with dynamic score show! (high score button should be removed!)
+- [ ] Add high score instead of snake image with dynamic score show! (high score button should be removed!)
+
+
+## Changelog
+
+**Version 1.1**
+- add high score manager
+- recording top 10 scores
+- show if you break best record
+- change victory condition
+- clean some classes
+- fix some bugs
+
+**Version 1.0**
+- initial version
