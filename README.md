@@ -19,6 +19,15 @@
 - [ ] Setting! (clear side bar? (Maybe!))
 
 
+## How To Play
+**really?!!! it's just a snake! play you dummy!**
+![Alt Text](https://github.com/SamadiPour/SnakeFX/blob/master/src/main/resources/images/hint.png)
+
+- P: Pause/Resume
+- R: Reset Game
+- Some Arrows: I'm not gonna explain that!
+
+
 ## Changelog
 **Version 1.2**
 - points from side bar removed and added to Main Panel (Looks good! doesn't it?)
