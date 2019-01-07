@@ -41,6 +41,7 @@ public class HighScoreTreeTable {
         JFXTreeTableView<Score> treeView = new JFXTreeTableView<>(root);
         treeView.setShowRoot(false);
         treeView.getColumns().setAll(playerNameColumn, scoreColumn);
+        treeView.setPrefHeight(490);
 
         FlowPane main = new FlowPane();
         main.getChildren().add(treeView);

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane fx:id="mainPane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ir.SamadiPour.SnakeFX.Controller.TopBarIconsController">
+   <children>
+      <HBox fx:id="hBoxPane" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="600.0" styleClass="topBar" stylesheets="@../stylesheet/stylesheet.css" AnchorPane.rightAnchor="0.0">
+         <children>
+            <JFXButton fx:id="infoBtn" onMouseClicked="#infoBtnClicked" styleClass="info-button" text="">
+               <graphic>
+                  <FontAwesomeIconView fill="#d4d4d4" glyphName="INFO" size="17" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="highScoreBtn" onMouseClicked="#highScoreClicked" styleClass="highScore-button" text="">
+               <graphic>
+                  <FontAwesomeIconView fill="#d4d4d4" glyphName="DIAMOND" size="17" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="minimizeBtn" onMouseClicked="#minimizeBtnClicked" styleClass="minimize-button" text="">
+               <graphic>
+                  <FontAwesomeIconView fill="#d4d4d4" glyphName="WINDOW_MINIMIZE" size="10" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="closeBtn" onMouseClicked="#closeBtnClicked" styleClass="close-button" text="">
+               <graphic>
+                  <FontAwesomeIconView fill="#d4d4d4" glyphName="CLOSE" size="19" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

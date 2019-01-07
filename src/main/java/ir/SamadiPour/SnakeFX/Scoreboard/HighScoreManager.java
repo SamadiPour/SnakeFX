@@ -41,7 +41,7 @@ public class HighScoreManager {
             updateScoreFile();
         } else {
             if (score > scores.get(scores.size() - 1).getScore()) {
-                scores.remove(0);
+                scores.remove(scores.size() - 1);
                 scores.add(new Score(score, name));
                 scores.sort(new ScoreComparator());
                 updateScoreFile();

@@ -3,6 +3,10 @@
     src: url("../font/Roboto-Regular.ttf");
 }
 
+.stack-pane {
+    -fx-border-color: #005D94;
+    -fx-border-width: 0 4 4 4;
+}
 
 .text-area {
     -fx-font-family: Roboto;
@@ -43,25 +47,6 @@
     -fx-font-weight: bold;
 }
 
-.jfx-decorator {
-    -fx-decorator-color: #005D94;
-    -fx-focus-traversable: false;
-}
-
-.jfx-decorator .button {
-    -fx-focus-traversable: false;
-}
-
-.jfx-decorator .jfx-decorator-buttons-container {
-    -fx-background-color: -fx-decorator-color;
-    -fx-focus-traversable: false;
-}
-
-.jfx-decorator .resize-border {
-    -fx-border-color: -fx-decorator-color;
-    -fx-border-width: 0 4 4 4;
-}
-
 .wrong-credentials {
     -jfx-unfocus-color: red;
     -jfx-focus-color: red;
@@ -75,19 +60,65 @@
     -fx-text-fill: #FFFFFF;
 }
 
-/* tree table view */
-
-.tree-table-view{
-    -fx-tree-table-color: rgba(255, 0, 0, 0.2);
-    -fx-tree-table-rippler-color : rgba(255, 0, 0, 0.4);
+.score-text {
+    -fx-background-color: transparent;
+    -fx-font-family: Roboto;
+    -fx-font-weight: Bold;
+    -fx-text-fill: rgba(86, 86, 86, 0.30);
+    /*-fx-alignment: center;*/
 }
+
+/***************************************** Top Bar Button And Pane *****************************************/
+
+/*.glyph-icon {*/
+/*-fx-font-family: "FontAwesome";*/
+/*-fx-text-fill: #d4d4d4;*/
+/*-fx-fill: #d4d4d4;*/
+/*-glyph-size: 19px;*/
+/*}*/
+
+.topBar {
+    -fx-background-color: #005D94;
+    -fx-focus-traversable: false;
+    -fx-pref-height: 38px;
+}
+
+.close-button:hover {
+    -fx-background-color: #cb0000;
+}
+
+.close-button:hover .glyph-icon {
+    -fx-text-fill: white;
+    -fx-fill: white;
+}
+
+.minimize-button:hover {
+    -fx-background-color: rgba(160, 160, 160, 0.57);
+}
+
+.info-button:hover {
+    -fx-background-color: rgba(160, 160, 160, 0.57);
+}
+
+.highScore-button:hover {
+    -fx-background-color: rgba(160, 160, 160, 0.57);
+}
+
+
+/***************************************** tree table view *****************************************/
+
+.tree-table-view {
+    -fx-tree-table-color: rgba(255, 0, 0, 0.2);
+    -fx-tree-table-rippler-color: rgba(255, 0, 0, 0.4);
+}
+
 .tree-table-view:focused .tree-table-row-cell:selected {
-    -fx-background-color: -fx-tree-table-color  ;
+    -fx-background-color: -fx-tree-table-color;
     -fx-table-cell-border-color: -fx-tree-table-color;
     -fx-text-fill: BLACK;
 }
 
-.tree-table-view:focused .tree-table-row-cell:selected .tree-table-cell{
+.tree-table-view:focused .tree-table-row-cell:selected .tree-table-cell {
     -fx-text-fill: BLACK;
 }
 
@@ -95,92 +126,93 @@
     -jfx-rippler-fill: -fx-tree-table-rippler-color;
 }
 
-.tree-table-view .column-header ,
+.tree-table-view .column-header,
 .tree-table-view .column-header-background,
-.tree-table-view .column-header-background .filler{
-    -fx-background-color:TRANSPARENT;
+.tree-table-view .column-header-background .filler {
+    -fx-background-color: TRANSPARENT;
 }
 
-.tree-table-view .column-header{
-    -fx-border-width : 0 1 0 1;
+.tree-table-view .column-header {
+    -fx-border-width: 0 1 0 1;
     -fx-border-color: #F3F3F3;
 }
 
 .tree-table-view .column-header .label {
-    -fx-text-fill : #949494;
-    -fx-padding : 16 0 16 0 ;
+    -fx-text-fill: #949494;
+    -fx-padding: 16 0 16 0;
 }
 
-.tree-table-view .column-header .arrow, .tree-table-view .column-header .sort-order-dot{
-    -fx-background-color : #949494;
+.tree-table-view .column-header .arrow, .tree-table-view .column-header .sort-order-dot {
+    -fx-background-color: #949494;
 }
 
 .tree-table-view .column-header.last-visible {
     -fx-border-width: 0 2 0 1;
 }
 
-.tree-table-view .column-header-background{
-    -fx-border-width : 0 0.0 1 0;
-    -fx-border-color:#F3F3F3;
+.tree-table-view .column-header-background {
+    -fx-border-width: 0 0.0 1 0;
+    -fx-border-color: #F3F3F3;
 }
 
-.tree-table-view .tree-table-cell{
-    -fx-border-width:0 0 0 0;
-    -fx-padding : 16 0 16 0 ;
+.tree-table-view .tree-table-cell {
+    -fx-border-width: 0 0 0 0;
+    -fx-padding: 11 0 11 0;
 }
 
-.tree-table-view .column-overlay{
+.tree-table-view .column-overlay {
     -fx-background-color: -fx-tree-table-color;
 }
 
-.tree-table-view .column-resize-line, .tree-table-view .column-drag-header{
+.tree-table-view .column-resize-line, .tree-table-view .column-drag-header {
     -fx-background-color: -fx-tree-table-rippler-color;
 }
 
 .tree-table-view:focused {
-    -fx-background-color: -fx-tree-table-color,-fx-box-border,-fx-control-inner-background;
+    -fx-background-color: -fx-tree-table-color, -fx-box-border, -fx-control-inner-background;
     -fx-background-insets: -1.4, 0, 1;
     -fx-background-radius: 1.4, 0, 0;
-    /*....*/
-    -fx-padding: 1; /* 0.083333em; */
+    -fx-padding: 1;
 }
 
 .tree-table-row-cell > .tree-disclosure-node > .arrow {
     -fx-background-color: -fx-text-fill;
-    -fx-padding: 0.333333em 0.229em 0.333333em 0.229em; /* 4 */
+    -fx-padding: 0.333333em 0.229em 0.333333em 0.229em;
     -fx-shape: "M 0 -3.5 L 4 0 L 0 3.5 z";
 }
-.tree-table-row-cell .jfx-text-field{
+
+.tree-table-row-cell .jfx-text-field {
     -fx-focus-color: rgb(240, 40, 40);
 }
 
-.tree-table-row-group{
+.tree-table-row-group {
     -fx-background-color: rgb(230, 230, 230);
 }
 
-
 .animated-option-button {
-    -fx-pref-width:50px;
-    -fx-background-color:#44B449;
-    -fx-background-radius:50px;
-    -fx-pref-height:50px;
-    -fx-text-fill:white;
-    -fx-border-color:WHITE;
+    -fx-pref-width: 50px;
+    -fx-background-color: #44B449;
+    -fx-background-radius: 50px;
+    -fx-pref-height: 50px;
+    -fx-text-fill: white;
+    -fx-border-color: WHITE;
     -fx-border-radius: 50px;
     -fx-border-width: 4px;
 }
 
 .animated-option-sub-button {
-    -fx-background-color:#43609C;
+    -fx-background-color: #43609C;
 }
+
 .animated-option-sub-button2 {
-    -fx-background-color: rgb(203,104,96);
+    -fx-background-color: rgb(203, 104, 96);
 }
 
-.tree-table-view .menu-item:focused{
-    -fx-background-color:-fx-tree-table-color;
+.tree-table-view .menu-item:focused {
+    -fx-background-color: -fx-tree-table-color;
 
 }
-.tree-table-view .menu-item .label{
+
+.tree-table-view .menu-item .label {
     -fx-padding: 5 0 5 0;
 }

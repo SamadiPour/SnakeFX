@@ -12,22 +12,10 @@
 <?import javafx.scene.layout.VBox?>
 
 <AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@../stylesheet/stylesheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ir.SamadiPour.SnakeFX.Controller.SidePanelController">
-    <VBox alignment="CENTER" prefWidth="270.0" spacing="45.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+    <VBox alignment="CENTER" prefWidth="270.0" spacing="45.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="45.0">
         <padding>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
         </padding>
-        <HBox alignment="CENTER" prefWidth="74.0">
-            <padding>
-                <Insets top="5.0" />
-            </padding>
-            <Label styleClass="text-area" text="Points:">
-            </Label>
-            <Label id="pointsLabel" fx:id="points" prefHeight="21.0" prefWidth="24.0" styleClass="text-area" text="0">
-                <padding>
-                    <Insets left="2.0" />
-                </padding>
-            </Label>
-        </HBox>
         <JFXSlider fx:id="speedSlider" blockIncrement="1.0" majorTickUnit="3.0" max="20.0" min="5.0" minorTickCount="2" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="10.0" />
         <VBox spacing="7.0">
             <HBox alignment="CENTER">

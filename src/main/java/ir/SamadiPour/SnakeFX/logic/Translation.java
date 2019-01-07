@@ -12,33 +12,34 @@ class Translation {
         switch (Direction.getDirection()) {
             case UP:
                 tail.setTranslateX(Main.player.getSnakePart(0).getTranslateX());
-                tail.setTranslateY(Main.player.getSnakePart(0).getTranslateY() - ScreenSize.BLOCK_SIZE);
+                if (Main.player.getSnakePart(0).getTranslateY() - ScreenSize.BLOCK_SIZE < 0)
+                    tail.setTranslateY(Setting.AppHeight() - ScreenSize.BLOCK_SIZE);
+                else
+                    tail.setTranslateY(Main.player.getSnakePart(0).getTranslateY() - ScreenSize.BLOCK_SIZE);
                 break;
             case DOWN:
                 tail.setTranslateX(Main.player.getSnakePart(0).getTranslateX());
-                tail.setTranslateY(Main.player.getSnakePart(0).getTranslateY() + ScreenSize.BLOCK_SIZE);
+                if (Main.player.getSnakePart(0).getTranslateY() + ScreenSize.BLOCK_SIZE >= Setting.AppHeight())
+                    tail.setTranslateY(0);
+                else
+                    tail.setTranslateY(Main.player.getSnakePart(0).getTranslateY() + ScreenSize.BLOCK_SIZE);
                 break;
             case LEFT:
-                tail.setTranslateX(Main.player.getSnakePart(0).getTranslateX() - ScreenSize.BLOCK_SIZE);
+                if (Main.player.getSnakePart(0).getTranslateX() - ScreenSize.BLOCK_SIZE < 0)
+                    tail.setTranslateX(Setting.AppWidth() - ScreenSize.BLOCK_SIZE);
+                else
+                    tail.setTranslateX(Main.player.getSnakePart(0).getTranslateX() - ScreenSize.BLOCK_SIZE);
                 tail.setTranslateY(Main.player.getSnakePart(0).getTranslateY());
                 break;
             case RIGHT:
-                tail.setTranslateX(Main.player.getSnakePart(0).getTranslateX() + ScreenSize.BLOCK_SIZE);
+                if (Main.player.getSnakePart(0).getTranslateX() + ScreenSize.BLOCK_SIZE >= Setting.AppWidth())
+                    tail.setTranslateX(0);
+                else
+                    tail.setTranslateX(Main.player.getSnakePart(0).getTranslateX() + ScreenSize.BLOCK_SIZE);
                 tail.setTranslateY(Main.player.getSnakePart(0).getTranslateY());
                 break;
         }
         keepHeadColor(tail);
-    }
-
-    static void SideHandle(Node tail) {
-        if (tail.getTranslateX() < 0)
-            tail.setTranslateX(Setting.AppWidth() - ScreenSize.BLOCK_SIZE);
-        if (tail.getTranslateX() >= Setting.AppWidth())
-            tail.setTranslateX(0);
-        if (tail.getTranslateY() < 0)
-            tail.setTranslateY(Setting.AppHeight() - ScreenSize.BLOCK_SIZE);
-        if (tail.getTranslateY() >= Setting.AppHeight())
-            tail.setTranslateY(0);
     }
 
     private static void keepHeadColor(Node tail) {

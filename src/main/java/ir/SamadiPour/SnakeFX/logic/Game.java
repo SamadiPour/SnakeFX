@@ -48,7 +48,7 @@ public class Game {
         return gamePause;
     }
 
-    static void setGamePause(boolean gamePause) {
+    public static void setGamePause(boolean gamePause) {
         Game.gamePause = gamePause;
     }
 
@@ -72,6 +72,10 @@ public class Game {
         return inDialog;
     }
 
+    public static void setInDialog(boolean inDialog) {
+        Game.inDialog = inDialog;
+    }
+
     public static HighScoreManager getHighScoreManager() {
         return highScoreManager;
     }
@@ -80,7 +84,7 @@ public class Game {
     //game functions
 
     public static Pane createContent() {
-        gamePane.setPrefSize(Setting.AppWidth() - 11, Setting.AppHeight() - 11);
+        gamePane.setPrefSize(Setting.AppWidth(), Setting.AppHeight());
         //main game works
         KeyFrame frame = new KeyFrame(Duration.seconds(1.0 / SpeedLevel.getSpeed()),
                 event -> Game.getCurrentGame().gameLoop());
@@ -161,7 +165,7 @@ public class Game {
         textField.requestFocus();
     }
 
-    private void showHighScoreDialog() {
+    public void showHighScoreDialog() {
         inDialog = true;
         //dialog box layout
         JFXDialogLayout dialogLayout = new JFXDialogLayout();
@@ -173,7 +177,7 @@ public class Game {
         //body
         dialogLayout.setBody(highScoreTreeTable.getHighScoreTreeTable());
         //button
-       JFXButton ok = new JFXButton("OK");
+        JFXButton ok = new JFXButton("OK");
         ok.setButtonType(JFXButton.ButtonType.RAISED);
         ok.getStyleClass().add("pink-btn");
         dialogLayout.setActions(ok);
@@ -225,7 +229,7 @@ public class Game {
     //Game Thread for playing.
     private static Timeline timeline = new Timeline();
 
-    static Timeline getTimeline() {
+    public static Timeline getTimeline() {
         return timeline;
     }
 
@@ -259,8 +263,6 @@ public class Game {
             Main.player.addSnake(0, tail);
         //check if snake eat itself
         Main.player.eatSnake(tail);
-        //check if snake is on the wall
-        Translation.SideHandle(tail);
         //check if snake eat food
         if (tail.getTranslateX() == food.getFood().getTranslateX() &&
                 tail.getTranslateY() == food.getFood().getTranslateY()) {

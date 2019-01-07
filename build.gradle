@@ -9,9 +9,15 @@ sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
+    jcenter()
+    maven {
+        url  "https://dl.bintray.com/jerady/maven"
+    }
 }
 
 dependencies {
     compile group: 'com.jfoenix', name: 'jfoenix', version: '8.0.2'
     compile group: 'io.github.typhon0', name: 'AnimateFX', version: '1.2.0'
+    compile 'de.jensd:fontawesomefx-commons:8.15'
+    compile 'de.jensd:fontawesomefx-fontawesome:4.7.0-5'
 }
