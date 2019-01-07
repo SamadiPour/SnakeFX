@@ -15,3 +15,4 @@
 - [ ] Hint in game
 - [ ] Maybe a face for snake? :confused:
 - [ ] Clean up messy code!
+- [ ] add high score instead of snake image with dynamic score show! (high score button should be removed!)
